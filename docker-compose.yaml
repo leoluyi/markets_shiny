@@ -1,0 +1,10 @@
+version: "3"
+services:
+    shiny-app:
+        build: .
+        ports:
+            - "3838:3838"
+        volumes:
+            - ./app:/srv/shiny-server/usa-trade
+            - ./shiny-server.conf:/etc/shiny-server/shiny-server.conf
+            

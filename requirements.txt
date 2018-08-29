@@ -1,0 +1,11 @@
+devtools
+dplyr
+tidyr
+fuzzyjoin
+stringr
+ggthemes
+quantmod
+ggplot2
+shinydashboard
+shinythemes
+
