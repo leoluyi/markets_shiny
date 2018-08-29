@@ -3,7 +3,7 @@ services:
     shiny-app:
         build: .
         ports:
-            - "8787:3838"
+            - "8899:3838"
         volumes:
-            - .:/srv/shiny-server/
+            - ./app:/srv/shiny-server/app
             - ./shiny-server.conf:/etc/shiny-server/shiny-server.conf
