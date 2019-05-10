@@ -43,7 +43,7 @@ before_install:
   - docker ps
 
 script:
-  - docker-compose exec app R -f /srv/shiny-server/app/run_tests.R
+  - docker-compose exec --workdir /srv/shiny-server/app app Rscript run_tests.R
 
 after_success:
   - docker-compose down
