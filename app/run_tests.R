@@ -10,7 +10,7 @@ xt <- xts(x = 1:3, order.by = as.Date(time))
 colnames(xt) <- "test_series"
 
 # test data.frame object
-test_df<-data.frame(date = as.Date(time), 
+test_df <- data.frame(date = as.Date(time), 
                     price = 1:3, 
                     symbol = rep("test_series",3))
 
@@ -18,7 +18,7 @@ test_df<-data.frame(date = as.Date(time),
 test_that("API works", {
         
         expect_error(getSymbols("SPY",
-                                src = "google", 
+                                src = "yahoo", 
                                 from = Sys.Date() - 10),
                      regexp = NA
 )
