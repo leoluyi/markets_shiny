@@ -1,7 +1,7 @@
 library(testthat)
 library(shinytest)
 library(quantmod)
-source("/srv/shiny-server/usa-trade/functions.R")
+source("/srv/shiny-server/app/functions.R")
 options(shiny.testmode=TRUE)
 
 # test xts object
@@ -34,11 +34,7 @@ test_that("Function one works", {
 # shiny app test
 test_that("Application works", {
 
-        expect_pass(testApp("/srv/shiny-server/usa-trade/",
+        expect_pass(testApp("/srv/shiny-server/app/",
                             testnames = "dates",
                             compareImages = FALSE))
 })
-
-
-
-
