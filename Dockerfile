@@ -15,7 +15,7 @@ RUN Rscript install_packages.R \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 ## install packages from github (and clean up)
-RUN Rscript -e "devtools::install_github('rstudio/shinytest','rstudio/webdriver')" \
+RUN Rscript -e "devtools::install_github('rstudio/shinytest');source('https://install-github.me/rstudio/webdriver')" \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 ## install phantomjs
