@@ -13,7 +13,7 @@ services:
   - docker
 
 before_install:
-  - travis_before_install.sh
+  - './travis_before_install.sh'
   - docker-compose up -d
   - docker ps
 
