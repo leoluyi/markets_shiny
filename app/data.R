@@ -1,4 +1,4 @@
-source("functions.R")
+source("functions.R", local = TRUE)
 
 # series to download
 import_series <- c("IMPJP", "IMPCH", "IMPMX", "IMPCA", "IMPGE")
