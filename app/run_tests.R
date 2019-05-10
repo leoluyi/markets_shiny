@@ -35,8 +35,9 @@ test_that("Function one works", {
 # shiny app test
 test_that("Application works", {
   expect_pass(
-    testApp(".",
-            testnames = "dates",
-            compareImages = FALSE)
+    testApp(
+      ".",
+      testnames = "dates",
+      compareImages = FALSE)
   )
 })
