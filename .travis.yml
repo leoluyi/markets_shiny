@@ -23,5 +23,5 @@ script:
 after_success:
   - docker-compose down
   - docker login -u leoluyi -p $DOCKER_PASSWORD
-  - docker tag leoluyi/shiny:latest leoluyi/shiny:$TRAVIS_BUILD_NUMBER
+  - docker tag leoluyi/market_shiny:latest leoluyi/market_shiny:$TRAVIS_BUILD_NUMBER
   - docker-compose push
